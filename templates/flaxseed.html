@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,72 +10,66 @@
     <link rel="icon" type="image/x-icon" href="/static/images/cash-stack.ico">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Money Laundering Detection Model</h1>
     </header>
     <main>
         <img src="/static/images/media-resources-logo-white-754x400.png" alt="LPL" width="400" height="533">
-        
 
-       <h2>Enter transaction information:</h2>
 
-        <form action="#">
+        <h2>Enter transaction information:</h2>
+        <div style="margin: auto;">
+            <form action="#">
+                <div>
+                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Sender account">
 
-            
-    
-            <div>
-                <input type="number" name="count" id="count" min="1" max="20" placeholder="Sender account">
-    
-            </div>
+                </div>
 
-            <div>
-                <input type="number" name="count" id="count" min="1" max="20" placeholder="Receiver account">
-    
-            </div>
+                <div>
+                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Receiver account">
 
-            <div>
-                <input type="number" name="count" id="count" min="1" max="20" placeholder="Amount">
-    
-            </div>
+                </div>
 
-            <div>
-                <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment currency">
-    
-            </div>
+                <div>
+                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Amount">
 
-            <div>
-                <input type="text" name="count" id="count" min="1" max="20" placeholder="Received currency">
-    
-            </div>
+                </div>
 
-            <div>
-                <input type="text" name="count" id="count" min="1" max="20" placeholder="Sender bank location">
-    
-            </div>
+                <div>
+                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment currency">
 
-            <div>
-                <input type="text" name="count" id="count" min="1" max="20" placeholder="Receiver bank location">
-    
-            </div>
+                </div>
 
-            <div>
-                <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment type">
-    
-            </div>
-            
-            
-    
-            <div>
-                <input type="submit" name="submit" id ="submit" value="Check">
-            </div>
-    </form>
+                <div>
+                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Received currency">
+
+                </div>
+
+                <div>
+                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Sender bank location">
+
+                </div>
+
+                <div>
+                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Receiver bank location">
+
+                </div>
+
+                <div>
+                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment type">
+
+                </div>
+                <input type="submit" name="submit" id="submit" value="Check">
+            </form>
+        </div>
+
 
     </main>
 
     <footer>
         <p class='font-sm'> &copy; Money Laundering Detection Model, Cypher.ai 2024. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>
