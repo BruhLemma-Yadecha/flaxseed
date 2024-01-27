@@ -9,8 +9,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif ;
     line-height: 1.5;
-    background: linear-gradient(rgb(224, 224, 231));
-    color: blue; 
+    background: linear-gradient(azure);
+    color: azure; 
     min-height: 100vh;
 }
 
@@ -28,9 +28,10 @@ input, textarea {
     font: inherit;
 }
 
-
-
-
+.center-div {
+  display: flex;
+  align-items: center;
+}
 
 header{
     background-color: rgb(4, 4, 114);
