@@ -6,3 +6,13 @@ app = Flask(__name__)
 def home():
 
     return render_template("flaxseed.html")
+
+def predict(test){
+    import joblib
+    model = joblib.load()
+
+
+}
+    
+
+
