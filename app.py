@@ -28,6 +28,9 @@ def home():
 
 @app.route("/output", methods =["GET", "POST"])
 def output():
+    values = [287305149, 4404767002, 14328.44, "UK","UK","UK","UK","Cheque"]
+    test = pd.DataFrame({"Test": values})
+    print(predict(test))
     prediction = session.get('prediction', None)
     # flash('prediction')
     return render_template("flaxseed_2.html", prediction = prediction)
