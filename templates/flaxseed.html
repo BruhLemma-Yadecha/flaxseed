@@ -23,43 +23,85 @@
         <div style="margin: auto;">
             <form action="#">
                 <div>
-                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Sender account">
+                    <input type="number" name="count" id="count" placeholder="Sender account">
+
+                </div>
+
+                
+
+                <div>
+                    <input type="number" name="count" id="count" placeholder="Receiver account">
 
                 </div>
 
                 <div>
-                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Receiver account">
+                    <input type="number" name="count" id="count" placeholder="Amount">
 
                 </div>
 
-                <div>
-                    <input type="number" name="count" id="count" min="1" max="20" placeholder="Amount">
 
+                <div>
+                   
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Payment currency:</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Robert Johnson">Robert Johnson</option>
+                        <!-- Add more names as needed -->
+                    </select>
                 </div>
 
-                <div>
-                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment currency">
+        
 
+                <div>
+                    
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Received currency:</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Robert Johnson">Robert Johnson</option>
+                        <!-- Add more names as needed -->
+                    </select>
                 </div>
 
-                <div>
-                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Received currency">
 
+
+                <div>
+                    
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Sender bank location:</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Robert Johnson">Robert Johnson</option>
+                        <!-- Add more names as needed -->
+                    </select>
                 </div>
 
-                <div>
-                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Sender bank location">
 
+
+
+                <div>
+                   
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Receiver bank location:</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Robert Johnson">Robert Johnson</option>
+                        <!-- Add more names as needed -->
+                    </select>
                 </div>
 
-                <div>
-                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Receiver bank location">
 
-                </div>
 
                 <div>
-                    <input type="text" name="count" id="count" min="1" max="20" placeholder="Payment type">
-
+                   
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Payment type:</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Robert Johnson">Robert Johnson</option>
+                        <!-- Add more names as needed -->
+                    </select>
                 </div>
                 <input type="submit" name="submit" id="submit" value="Check">
             </form>
