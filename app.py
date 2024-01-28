@@ -21,11 +21,10 @@ def home():
         values = [s_account, r_account, amount, p_currency, r_currency, sb_location, rb_location, p_type]
 
 
-        countries = ["Albania","Austria","France","Germany","India","Italy","Japan","Mexico","Morocco","Netherlands","Nigeria","Pakistan",
-                 "Spain","Switzerland", "Turkey","UAE","UK","USA"]
+        countries = ["Albania","Austria","France","Germany","India","Italy","Japan","Mexico","Morocco","Netherlands","Nigeria","Pakistan","Spain","Switzerland", "Turkey","UAE","UK","USA"]
         currency = ["Albania","Euro","India","Japan","Mexico","Morocco","Nigeria","Pakistan","Switzerland","Turkey","UAE","UK","USA"]
         payment_type = ["ACH","CashDeposit","CashWithdrawal","Cheque","CreditCard","CrossBorder","DebitCard"]
-       
+        
         list_payment_currency = []
         list_received_currency = []
         list_sender_bank_location = []
