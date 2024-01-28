@@ -22,8 +22,8 @@ def home():
 
 
         countries = ["Albania","Austria","France","Germany","India","Italy","Japan","Mexico","Morocco","Netherlands","Nigeria","Pakistan","Spain","Switzerland", "Turkey","UAE","UK","USA"]
-        currency = ["Albania","Euro","India","Japan","Mexico","Morocco","Nigeria","Pakistan","Switzerland","Turkey","UAE","UK","USA"]
-        payment_type = ["ACH","CashDeposit","CashWithdrawal","Cheque","CreditCard","CrossBorder","DebitCard"]
+        currency = ["Albanian lek","Euro","Indian rupee","Yen","Mexican Peso","Moroccan dirham","Naira","Pakistani rupee","Swiss franc","Turkish lira","Dirham","UK pounds","US dollar"]
+        payment_type = ["ACH","Cash Deposit","Cash Withdrawal","Cheque","Credit Card","Cross-border","Debit Card"]
         
         list_payment_currency = []
         list_received_currency = []

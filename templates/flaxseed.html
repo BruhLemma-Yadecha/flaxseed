@@ -21,28 +21,28 @@
 
         <h2>Enter transaction information:</h2>
         <div style="margin: auto;">
-            <form action="#">
+            <form action="/", method = "POST">
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Sender account">
+                    <input type="number" name="s_account" id="s_account" placeholder="Sender account">
 
                 </div>
 
 
 
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Receiver account">
+                    <input type="number" name="r_account" id="r_account" placeholder="Receiver account">
 
                 </div>
 
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Amount">
+                    <input type="number" name="amount" id="amount" placeholder="Amount">
 
                 </div>
 
 
                 <div>
 
-                    <select id="name" name="name" required>
+                    <select id="p_currency" name="p_currency" required>
                         <option value="" disabled selected>Payment currency:</option>
                         <option value="UK pounds">UK pounds</option>
                         <option value="Indian rupee">Indian rupee</option>
@@ -53,9 +53,9 @@
                         <option value="Yen">Yen</option>
                         <option value="Euro">Euro</option>
                         <option value="Dirham">Dirham</option>
-                        <option value="Mexican Pes">Mexican Peso</option>
+                        <option value="Mexican Peso">Mexican Peso</option>
                         <option value="Turkish lira">Turkish lira</option>
-                        <option value="US dollarh">US dollar</option>
+                        <option value="US dollar">US dollar</option>
                         <option value="Moroccan dirham">Moroccan dirham</option>
 
                     </select>
@@ -64,7 +64,7 @@
 
 
                 <div>
-                    <select id="name" name="name" required>
+                    <select id="r_currency" name="r_currency" required>
                         <option value="" disabled selected>Received currency:</option>
                         <option value="UK pounds">UK pounds</option>
                         <option value="Indian rupee">Indian rupee</option>
@@ -77,7 +77,7 @@
                         <option value="Dirham">Dirham</option>
                         <option value="Mexican Pes">Mexican Peso</option>
                         <option value="Turkish lira">Turkish lira</option>
-                        <option value="US dollarh">US dollar</option>
+                        <option value="US dollar">US dollar</option>
                         <option value="Moroccan dirham">Moroccan dirham</option>
                     </select>
                 </div>
@@ -85,7 +85,7 @@
 
 
                 <div>
-                    <select id="name" name="name" required>
+                    <select id="sb_location" name="sb_location" required>
                         <option value="" disabled selected>Sender bank location:</option>
                         <option value="UK">UK</option>
                         <option value="India">India</option>
@@ -112,7 +112,7 @@
 
 
                 <div>
-                    <select id="name" name="name" required>
+                    <select id="rb_location" name="rb_location" required>
                         <option value="" disabled selected>Receiver bank location:</option>
                         <option value="UK">UK</option>
                         <option value="India">India</option>
@@ -138,7 +138,7 @@
 
 
                 <div>
-                    <select id="name" name="name" required>
+                    <select id="payment_type" name="payment_type" required>
                         <option value="" disabled selected>Payment type:</option>
                         <option value="Cash Deposit">Cash Deposit</option>
                         <option value="Cross-border">Cross-border</option>
