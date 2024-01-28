@@ -19,34 +19,69 @@ def home():
         rb_location = request.form.get("rb_location")
         p_type = request.form.get("p_type")
         values = [s_account, r_account, amount, p_currency, r_currency, sb_location, rb_location, p_type]
-        df_test = pd.DataFrame({"Test": values})
-        prediction = predict(df_test)
-        session['prediction'] = 'prediction'
+
+
+        countries = ["Albania","Austria","France","Germany","India","Italy","Japan","Mexico","Morocco","Netherlands","Nigeria","Pakistan",
+                 "Spain","Switzerland", "Turkey","UAE","UK","USA"]
+        currency = ["Albania","Euro","India","Japan","Mexico","Morocco","Nigeria","Pakistan","Switzerland","Turkey","UAE","UK","USA"]
+        payment_type = ["ACH","CashDeposit","CashWithdrawal","Cheque","CreditCard","CrossBorder","DebitCard"]
+       
+        list_payment_currency = []
+        list_received_currency = []
+        list_sender_bank_location = []
+        list_receiver_bank_location = []
+        list_payment_type = []
+        
+
+
+        for i in currency:
+            if i == p_currency:
+                list_payment_currency.append(1)
+            else:
+                list_payment_currency.append(0)
+            if i == r_currency:
+                list_received_currency.append(1)
+            else:
+                list_received_currency.append(0)
+
+        for i in countries:
+            if i == sb_location:
+                list_sender_bank_location.append(1)
+            else:
+                list_sender_bank_location.append(0)
+            if i == rb_location:
+                list_receiver_bank_location.append(1)
+            else:
+                list_receiver_bank_location.append(0)    
+
+        for i in payment_type:
+            if i == p_type:
+                list_payment_type.append(1)
+            else:
+                list_payment_type.append(0)    
+
+        final_test_list = [s_account,r_account,amount]+list_payment_currency+list_received_currency+list_sender_bank_location+list_receiver_bank_location+list_payment_type
+
+
+        df_test = pd.DataFrame({"Test": final_test_list})
+        session['df_test'] = df_test
         redirect(output)
     else:
         return render_template("flaxseed.html")
 
 @app.route("/output", methods =["GET", "POST"])
 def output():
-    values = [287305149, 4404767002, 14328.44, "UK","UK","UK","UK","Cheque"]
-    test = pd.DataFrame({"Test": values})
-    print(predict(test))
-    prediction = session.get('prediction', None)
+    
+    df_test = session.get('df_test', None)
+    prediction = predict(df_test)
+
     # flash('prediction')
     return render_template("flaxseed_2.html", prediction = prediction)
-    if request.method == "GET":
-        prediction = session.get('prediction', None)
-        return render_template("flaxseed_2.html", prediction = prediction)
     
 
 
 def predict(df_test):
-    df_test = pd.get_dummies(df_test, columns = ["Payment_currency"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Received_currency"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Sender_bank_location"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Receiver_bank_location"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Payment_type"], dtype=int) 
-    
+
     prediction = model.predict(df_test)
     return prediction
 
