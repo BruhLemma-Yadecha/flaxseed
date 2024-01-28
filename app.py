@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 
 model = joblib.load("static/gnb_model.joblib")
-print(model)
 app = Flask(__name__)
+app.config["SECRET_KEY"] = 'cypher.ai flaxseed'
 
 @app.route("/")
 def home():
