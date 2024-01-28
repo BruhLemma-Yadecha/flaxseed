@@ -28,16 +28,16 @@ def home():
 
 @app.route("/output", methods =["GET", "POST"])
 def output():
-    prediction = session.get('prediction', None)
-    # flash('prediction')
-    return render_template("flaxseed_2.html", prediction = prediction)
+    if request.method == "GET":
+        prediction = session.get('prediction', None)
+        return render_template("flaxseed_2.html", prediction = prediction)
     
 
 
 def predict(df_test):
-    df_test = pd.get_dummies(df_test, columns = ["Payment_currency"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Received_currency"], dtype=int) 
-    df_test = pd.get_dummies(df_test, columns = ["Sender_bank_location"], dtype=int) 
+    df_test = pd.get_dummies(df_test, columns = ["Payment_currency"], dtype=int)
+    df_test = pd.get_dummies(df_test, columns = ["Received_currency"], dtype=int)
+    df_test = pd.get_dummies(df_test, columns = ["Sender_bank_location"], dtype=int)
     df_test = pd.get_dummies(df_test, columns = ["Receiver_bank_location"], dtype=int) 
     df_test = pd.get_dummies(df_test, columns = ["Payment_type"], dtype=int) 
     
