@@ -34,6 +34,9 @@ def output():
     prediction = session.get('prediction', None)
     # flash('prediction')
     return render_template("flaxseed_2.html", prediction = prediction)
+    if request.method == "GET":
+        prediction = session.get('prediction', None)
+        return render_template("flaxseed_2.html", prediction = prediction)
     
 
 
