@@ -8,7 +8,7 @@
     <meta name="author" content="YourName">
     <title>Money Laundering Detection Model</title>
     <link rel="icon" type="image/x-icon" href="/static/images/cash-stack.ico">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
 <body>
@@ -20,88 +20,58 @@
 
 
         <h2>Enter transaction information:</h2>
-        <div style="margin: auto;">
-            <form action="#">
+        <div>
+            <form action="/" method="post">
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Sender account">
+                    <input type="number" name="s_account" id="s_account" min="1" max="20" placeholder="Sender account">
 
                 </div>
 
                 
 
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Receiver account">
+                    <input type="number" name="r_account" id="r_account" min="1" max="20" placeholder="Receiver account">
 
                 </div>
 
                 <div>
-                    <input type="number" name="count" id="count" placeholder="Amount">
+                    <input type="number" name="amount" id="amount" min="1" max="20" placeholder="Amount">
 
                 </div>
 
 
                 <div>
-                   
-                    <select id="name" name="name" required>
-                        <option value="" disabled selected>Payment currency:</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Smith">Jane Smith</option>
-                        <option value="Robert Johnson">Robert Johnson</option>
-                        <!-- Add more names as needed -->
-                    </select>
+                    <input type="text" name="p_currency" id="p_currency" min="1" max="20" placeholder="Payment currency">
+
                 </div>
 
         
 
                 <div>
-                    
-                    <select id="name" name="name" required>
-                        <option value="" disabled selected>Received currency:</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Smith">Jane Smith</option>
-                        <option value="Robert Johnson">Robert Johnson</option>
-                        <!-- Add more names as needed -->
-                    </select>
+                    <input type="text" name="r_currency" id="r_currency" min="1" max="20" placeholder="Received currency">
+
                 </div>
 
 
 
                 <div>
-                    
-                    <select id="name" name="name" required>
-                        <option value="" disabled selected>Sender bank location:</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Smith">Jane Smith</option>
-                        <option value="Robert Johnson">Robert Johnson</option>
-                        <!-- Add more names as needed -->
-                    </select>
+                    <input type="text" name="sb_location" id="sb_location" min="1" max="20" placeholder="Sender bank location">
+
                 </div>
 
 
 
 
                 <div>
-                   
-                    <select id="name" name="name" required>
-                        <option value="" disabled selected>Receiver bank location:</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Smith">Jane Smith</option>
-                        <option value="Robert Johnson">Robert Johnson</option>
-                        <!-- Add more names as needed -->
-                    </select>
+                    <input type="text" name="rb_location" id="rb_location" min="1" max="20" placeholder="Receiver bank location">
+
                 </div>
 
 
 
                 <div>
-                   
-                    <select id="name" name="name" required>
-                        <option value="" disabled selected>Payment type:</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Smith">Jane Smith</option>
-                        <option value="Robert Johnson">Robert Johnson</option>
-                        <!-- Add more names as needed -->
-                    </select>
+                    <input type="text" name="p_type" id="p_type" min="1" max="20" placeholder="Payment type">
+
                 </div>
                 <input type="submit" name="submit" id="submit" value="Check">
             </form>
