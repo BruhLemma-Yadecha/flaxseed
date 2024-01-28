@@ -20,59 +20,138 @@
 
 
         <h2>Enter transaction information:</h2>
-        <div>
-            <form action="/" method="post">
+        <div style="margin: auto;">
+            <form action="#">
                 <div>
-                    <input type="number" name="s_account" id="s_account" min="1" max="20" placeholder="Sender account">
-
-                </div>
-
-                
-
-                <div>
-                    <input type="number" name="r_account" id="r_account" min="1" max="20" placeholder="Receiver account">
-
-                </div>
-
-                <div>
-                    <input type="number" name="amount" id="amount" min="1" max="20" placeholder="Amount">
-
-                </div>
-
-
-                <div>
-                    <input type="text" name="p_currency" id="p_currency" min="1" max="20" placeholder="Payment currency">
-
-                </div>
-
-        
-
-                <div>
-                    <input type="text" name="r_currency" id="r_currency" min="1" max="20" placeholder="Received currency">
+                    <input type="number" name="count" id="count" placeholder="Sender account">
 
                 </div>
 
 
 
                 <div>
-                    <input type="text" name="sb_location" id="sb_location" min="1" max="20" placeholder="Sender bank location">
+                    <input type="number" name="count" id="count" placeholder="Receiver account">
 
                 </div>
 
+                <div>
+                    <input type="number" name="count" id="count" placeholder="Amount">
+
+                </div>
+
+
+                <div>
+
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Payment currency:</option>
+                        <option value="UK pounds">UK pounds</option>
+                        <option value="Indian rupee">Indian rupee</option>
+                        <option value="Albanian lek">Albanian lek</option>
+                        <option value="Swiss franc">Swiss franc</option>
+                        <option value="Pakistani rupee">Pakistani rupee</option>
+                        <option value="Naira">Naira</option>
+                        <option value="Yen">Yen</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Dirham">Dirham</option>
+                        <option value="Mexican Pes">Mexican Peso</option>
+                        <option value="Turkish lira">Turkish lira</option>
+                        <option value="US dollarh">US dollar</option>
+                        <option value="Moroccan dirham">Moroccan dirham</option>
+
+                    </select>
+                </div>
 
 
 
                 <div>
-                    <input type="text" name="rb_location" id="rb_location" min="1" max="20" placeholder="Receiver bank location">
-
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Received currency:</option>
+                        <option value="UK pounds">UK pounds</option>
+                        <option value="Indian rupee">Indian rupee</option>
+                        <option value="Albanian lek">Albanian lek</option>
+                        <option value="Swiss franc">Swiss franc</option>
+                        <option value="Pakistani rupee">Pakistani rupee</option>
+                        <option value="Naira">Naira</option>
+                        <option value="Yen">Yen</option>
+                        <option value="Euro">Euro</option>
+                        <option value="Dirham">Dirham</option>
+                        <option value="Mexican Pes">Mexican Peso</option>
+                        <option value="Turkish lira">Turkish lira</option>
+                        <option value="US dollarh">US dollar</option>
+                        <option value="Moroccan dirham">Moroccan dirham</option>
+                    </select>
                 </div>
 
 
 
                 <div>
-                    <input type="text" name="p_type" id="p_type" min="1" max="20" placeholder="Payment type">
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Sender bank location:</option>
+                        <option value="UK">UK</option>
+                        <option value="India">India</option>
+                        <option value="Albania">Albania</option>
+                        <option value="France">France</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Spain">Spain</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="USA">USA</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Germany">Italy</option>
 
+                    </select>
                 </div>
+
+
+
+                <div>
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Receiver bank location:</option>
+                        <option value="UK">UK</option>
+                        <option value="India">India</option>
+                        <option value="Albania">Albania</option>
+                        <option value="France">France</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Spain">Spain</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="USA">USA</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Germany">Italy</option>
+                    </select>
+                </div>
+
+
+
+                <div>
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>Payment type:</option>
+                        <option value="Cash Deposit">Cash Deposit</option>
+                        <option value="Cross-border">Cross-border</option>
+                        <option value="Cheque">Cheque</option>
+                        <option value="ACH">ACH</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="Cash Withdrawal">Cash Withdrawal</option>
+
+                    </select>
+                </div>
+
+
                 <input type="submit" name="submit" id="submit" value="Check">
             </form>
         </div>
@@ -84,4 +163,5 @@
         <p class='font-sm'> &copy; Money Laundering Detection Model, Cypher.ai 2024. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
