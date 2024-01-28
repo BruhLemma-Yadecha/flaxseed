@@ -19,8 +19,8 @@ def home():
         rb_location = request.form.get("rb_location")
         p_type = request.form.get("p_type")
         values = [s_account, r_account, amount, p_currency, r_currency, sb_location, rb_location, p_type]
-        df = pd.DataFrame({"Test": values})
-        prediction = predict(df)
+        df_test = pd.DataFrame({"Test": values})
+        prediction = predict(df_test)
         session['prediction'] = 'prediction'
         redirect(output)
     else:
